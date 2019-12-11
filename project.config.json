@@ -4,16 +4,24 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"coverView": true
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.3",
+	"libVersion": "2.9.2",
 	"appid": "wx8962d1686bbb6470",
 	"projectname": "wymusic",
 	"debugOptions": {
@@ -31,13 +39,85 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/singer/singer",
+					"pathName": "pages/singer/singer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/musiclist/musiclist",
+					"pathName": "pages/musiclist/musiclist",
+					"query": "copywriter=\"编辑推荐：每周VIP专享歌曲，编辑精选推荐“&musicid=2409342460",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/playing/playing",
+					"pathName": "pages/playing/playing",
+					"query": "radioid= 2064240345",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/singerdetail/singerdetail",
+					"pathName": "pages/singerdetail/singerdetail",
+					"query": "musicianid=5781",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/search/search",
+					"pathName": "pages/search/search",
+					"query": "value=薛之谦",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/video/video",
+					"pathName": "pages/video/video",
+					"query": "vid=1E4B54192D744F31DE1486EB173F5485",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/radio/radio",
+					"pathName": "pages/radio/radio",
+					"query": "radioid=2593003",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/moremusic/moremusic",
+					"pathName": "pages/moremusic/moremusic",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
+					"query": "userId= 76075443",
+					"scene": null
+				}
+			]
 		}
 	}
 }

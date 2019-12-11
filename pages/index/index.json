@@ -1,3 +1,11 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-search": "../../lib/vant/search/index",
+    "tuijian": "../../components/tuijian/tuijian",
+    "newmusic": "../../components/newmusic/newmusic",
+    "newpower": "../../components/newpower/newpower",
+    "radio": "../../components/radio/radio",
+    "program": "../../components/program/program",
+    "van-popup": "../../lib/vant/popup/index"
+  }
 }

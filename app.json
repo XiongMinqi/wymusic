@@ -1,13 +1,57 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/mine/mine",
+    "pages/singer/singer",
+    "pages/login/login",
+    "pages/fans/fans",
+    "pages/focus/focus",
+    "pages/registered/registered",
+    "pages/edit/edit",
+    "pages/musiclist/musiclist",
+    "pages/playing/playing",
+    "pages/singerdetail/singerdetail",
+    "pages/search/search",
+    "pages/video/video",
+    "pages/disc/disc",
+    "pages/radio/radio",
+    "pages/user/user",
+    "pages/moremusic/moremusic",
+    "pages/moredisc/moredisc",
+    "pages/moresongs/moresongs"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#f45",
+    "navigationBarTitleText": "网易云音乐",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#ff0000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home (1).png"
+      },
+      {
+        "pagePath": "pages/singer/singer",
+        "text": "歌手",
+        "iconPath": "images/Microphone-1.png",
+        "selectedIconPath": "images/Microphone-1 (1).png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine (1).png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -1,21 +1,186 @@
-/**index.wxss**/
-.userinfo {
+.top {
+  padding: 0 30rpx;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  font-weight: bold;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+.music {
+  width: 16%;
+}
+
+.search {
+  width: 11%;
+}
+
+.topimg image {
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+}
+
+.input {
+  width: 70%;
+}
+
+.banner {
+  width: 95%;
+  height: 300rpx;
+  margin: 0 auto;
+  border-radius: 15rpx;
+  /* border-radius: 30rpx 20rpx 0 0; */
+}
+
+.bannerimg image {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 15rpx;
+}
+
+.radus {
+  border-radius: 15rpx;
+}
+
+.daytuijian {
+  padding: 34rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30rpx;
+  /* background: black; */
+}
+
+.daydetail {
+  width: 20%;
+  text-align: center;
+}
+
+.dayimg {
+  margin: 0 auto;
+  text-align: center;
+  width: 100rpx;
+  height: 100rpx;
   border-radius: 50%;
+  background: #f00;
+  position: relative;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.daydetail image {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -25rpx;
+  left: 50%;
+  margin-left: -25rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.musiclist {
+  width: 98%;
+  /* margin: 0 auto; */
+}
+
+.square {
+  padding: 10rpx 30rpx;
+  border-radius: 42rpx;
+  background: #f2f2f2;
+}
+
+.contentlist {
+  /* flex-wrap: wrap; */
+}
+
+.tuijianmsg {
+  width: 30%;
+  display: inline-block;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.tuijianname {
+  font-size: 26rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical; /*子元素排列 vertical（竖排）*/
+  -webkit-line-clamp: 1; /*设置显示的多少行。*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tuijianimg image {
+  width: 100%;
+  height: 160rpx;
+  /* margin-bottom: 12rpx; */
+}
+
+.searchtishi {
+  color: skyblue;
+  padding: 20rpx 40rpx;
+}
+
+.searchdetail {
+  padding: 20rpx 70rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+.searchlist {
+  background: #f2f2f2;
+}
+
+.searchtop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33rpx;
+}
+
+.history {
+  display: inline-block;
+  width: 30%;
+  margin-bottom: 30rpx;
+  margin-left: 2.5%
+}
+.hisitem {
+  padding: 10rpx 20rpx;
+  background: white;
+  border-radius: 20rpx;
+  text-align: center;
+}
+.hotlist{
+  padding: 0 30rpx;
+  padding-top: 30rpx;
+}
+.hot{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0
+}
+.hotindex{
+  margin-right: 20rpx;
+}
+.hotitem{
+  color: rgb(235, 147, 135);
+  margin-left: 30rpx;
+}
+.bg{
+  color: rgb(235, 147, 135)
+}
+.elsehis{
+  padding: 40rpx;
+  text-align: center;
 }

@@ -1,13 +1,132 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<!-- 轮播图 -->
+<view wx:if="{{num===1}}">
+
+  <view class="top">
+    <view class="music">音乐馆</view>
+    <view class="input">
+      <van-search shape="round" value="{{ value }}" bindfocus="oninput" placeholder="请输入搜索关键词" />
+    </view>
+    <view class="search" bindtap="onsearch">搜索</view>
+    <view class="topimg">
+      <image src="../../images/musicgray.png"></image>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+
+  <view class="banner">
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="2000" duration="500">
+      <block wx:for="{{banner}}" wx:key="*this">
+        <swiper-item class="radus">
+          <view class="bannerimg">
+            <image src="{{item.imageUrl}}" bindtap="playvedio" data-item="{{item}}"></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 每日推荐 -->
+  <view class="daytuijian">
+    <view class="daydetail">
+      <view class="dayimg">
+        <image src="../../images/tuijian.png"></image>
+      </view>
+      <view>每日推荐</view>
+    </view>
+    <view class="daydetail">
+
+      <view class="dayimg">
+        <image src="../../images/music (1).png"></image>
+      </view>
+      <view>歌单</view>
+    </view>
+    <view class="daydetail">
+
+      <view class="dayimg">
+        <image src="../../images/paihang1.png"></image>
+      </view>
+      <view>排行榜</view>
+    </view>
+    <view class="daydetail">
+
+      <view class="dayimg">
+        <image src="../../images/radio.png"></image>
+      </view>
+      <view>电台</view>
+    </view>
+    <view class="daydetail">
+      <view class="dayimg">
+        <image src="../../images/nowplay1.png"></image>
+      </view>
+      <view>直播</view>
+    </view>
+  </view>
+  <!-- 推荐歌单 -->
+  <view>
+    <tuijian/>
+  </view>
+  <!-- 新歌新碟 -->
+  <view>
+    <newmusic/>
+  </view>
+  <!-- 音乐新势力 -->
+  <view>
+    <newpower/>
+  </view>
+  <!-- 推荐电台 -->
+  <view>
+    <radio/>
+  </view>
+  <!-- 推荐节目 -->
+  <view>
+    <program/>
+  </view>
+</view>
+<view wx:else>
+
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action shape="round" bind:change="onSearch" bind:cancel="onCancel" />
+  <view wx:if="{{words===true}}">
+    <view bindtap="searchvalue" data-item="{{value}}" class="searchtishi">搜索"{{value}}"</view>
+    <view wx:for="{{result.artists}}" wx:key="{{index}}">
+      <view class="searchdetail" bindtap="musician" data-item="{{item.name}}">{{item.name}}</view>
+    </view>
+    <view wx:for="{{result.songs}}" wx:key="{{index}}">
+      <view class="searchdetail" bindtap="musicdetail" data-item="{{item.artists[0].name}} {{item.name}}">{{item.artists[0].name}} {{item.name}}</view>
+    </view>
+  </view>
+  <view class="searchlist" wx:else>
+    <view wx:if="{{histories}}">
+      <view class="searchtop">
+        <view>搜索历史</view>
+        <view bindtap="clear">清空历史</view>
+      </view>
+      <view class="searchhistory">
+        <view class="history" wx:for="{{histories}}" wx:key="{{index}}">
+          <view class="hisitem" bindtap="historylist" data-item="{{item}}">{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="elsehis" wx:else>暂时还没有搜索历史</view>
+  </view>
+  <view class="hotlist">
+
+    <scroll-view scroll-y="true" style="height: 750rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+      <view>热搜榜</view>
+      <view wx:for="{{hotlist}}" wx:key="{{index}}">
+        <view class="hot" bindtap="searchWord" data-value="{{item.searchWord}}">
+          <view class="hotindex {{index<3?'bg':''}}">{{index+1}}</view>
+          <view>{{item.searchWord}}</view>
+          <view class="hotitem" wx:if="{{index<2}}">hot</view>
+        </view>
+      </view>
+    </scroll-view>
+
+
+
+
+
+
+
+
+
   </view>
 </view>
